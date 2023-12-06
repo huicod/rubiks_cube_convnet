@@ -1,3 +1,14 @@
+﻿# Local Fork Notes
+
+This repository is a fork/derivative of [`jerpint/rubiks_cube_convnet`](https://github.com/jerpint/rubiks_cube_convnet), a Keras/TensorFlow experiment that trains a simple ConvNet to predict Rubik's Cube moves from cube states.
+
+Local changes in this fork are limited: `train_cube.py` was modified for data-generation and one-hot label debugging, and `test.py` was added as a minimal `to_categorical` check. See [`ATTRIBUTION.md`](ATTRIBUTION.md) for source and license notes.
+
+Compatibility note: the locally modified files pass Python syntax checks, but the bundled upstream `MagicCube` code contains Python 2 style syntax and was not modernized in this fork.
+
+The original upstream README follows.
+
+---
 # rubiks_cube_convnet
 
 How to train a simple convnet to solve a rubiks cube.  
@@ -35,4 +46,6 @@ python train_cube.py
 There is plenty of exploring to do! Bigger networks might be one solution, fancier networks would likely be more appropriate. I thought of reinforcement learning, but decided to use the simpler supervised-learning approach to begin.
 
 REMEMBER: The search-space for a properly mixed cube is HUGE (something like 4e19 iirc). The original thought was that a ConvNet might be able to solve such a space. I do think that a more sophisticated approach would be necessary to solve for 10+ moves.  Maybe an idea would be to 'introduce' the cube to known cube algorithms in the train set and let it learn to optimise based on those, such that it can learn to 'think ahead'. Also a reward system reinforcement approach could be a good idea.
+
+
 
